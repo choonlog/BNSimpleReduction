@@ -13,6 +13,8 @@ You can simply download it from this git repository. setup.py is not provided. I
 
 ## Example
 The following functions are in main.py:
+```
 red.LetsReduce("Cohen.txt", "00110010110000000000100001001011", True)
+```
 
 The first parameter is the name of the network file in the networks folder. The second parameter is the desired attractor of the network. The node order must match the node order of the network file. The third parameter can be True or False. True means leaving only one plus product and False means leaving all plus product when reducing the networks.
