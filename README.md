@@ -53,3 +53,4 @@ p53 = (DNAdamage or CTNNB1 or NICD or miR34) and not SNAI2 and not p73 and not A
 p63 = DNAdamage and not NICD and not AKT1 and not AKT2 and not p53 and not miR203
 p73 = DNAdamage and not p53 and not ZEB1 and not AKT1 and not AKT2
 ```
+All input nodes with the indegree of 0 should write '_INPUT_' instead of a Boolean transfer function.
