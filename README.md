@@ -54,4 +54,4 @@ p63 = DNAdamage and not NICD and not AKT1 and not AKT2 and not p53 and not miR20
 p73 = DNAdamage and not p53 and not ZEB1 and not AKT1 and not AKT2
 ```
 
-You should write '_INPUT_' for the Boolean transfer function of all input nodes with the indegree of 0 like DNAdamage and ECM in the example above.
+You should write _INPUT_ for the Boolean transfer function of all input nodes with the indegree of 0 like DNAdamage and ECM in the example above.
