@@ -1,2 +1,4 @@
 ## BNSimpleReduction
 BNSimpleReduction
+
+## Installation
