@@ -20,24 +20,36 @@ red.LetsReduce("metastasis_influence_network.txt", "0011001011000000000010000100
 
 The first parameter is the name of the network file in the networks folder. The second parameter is the desired attractor of the network. The node order must match the node order of the network file. The third parameter can be True or False. True means leaving only one plus product and False means leaving all plus product when reducing the networks. The network file should be written as follows.
 ```
-x01 = x03 and not x04
-x02 = x01 or not x18
-x03 = x10 or not x05
-x04 = x04 or (x02 and x14)
-x05 = (x03 and not x13) or (not x01 and not x13)
-x06 = not x20
-x07 = not x14 or (x16 and not x10)
-x08 = (x04 and not x12) or (x12 and not x04) or (not x04 and not x09)
-x09 = (x05 and not x16) or (x16 and not x05)
-x10 = x10
-x11 = not x08 and not x13
-x12 = (x08 and x20) or (not x08 and not x20)
-x13 = not x11
-x14 = (x16 and x20) or (not x18 and not x20)
-x15 = not x08
-x16 = (x15 and not x17) or (x17 and not x15)
-x17 = x09
-x18 = x03
-x19 = (x07 and x09) or (x20 and not x07)
-x20 = not x09 or not x16
+AKT1 = CTNNB1 and (NICD or TGFbeta or GF_ or CDH2) and not p53 and not miR34 and not CDH1
+AKT2 = TWIST1 and (TGFbeta or GF_ or CDH2) and not (miR203 or miR34 or p53)
+Apoptosis = (p53 or p63 or p73 or miR200 or miR34) and not ZEB2 and not AKT1 and not ERK
+CDH1 = not TWIST1 and not SNAI2 and not ZEB1 and not ZEB2 and not SNAI1 and not AKT2
+CDH2 = TWIST1
+CTNNB1 = not DKK1 and not p53 and not AKT1 and not miR34 and not miR200 and not CDH1 and not CDH2 and not p63
+CellCycleArrest = (miR203 or miR200 or miR34 or ZEB2 or p21) and not AKT1
+DKK1 = CTNNB1 or NICD
+DNAdamage = _INPUT_
+ECM = _INPUT_
+EMT = CDH2 and not CDH1
+ERK = (SMAD or CDH2 or GF_ or NICD) and not AKT1
+GF_ = not CDH1 and (GF_ or CDH2)
+Invasion = (SMAD and CDH2) or CTNNB1
+Metastasis = Migration
+Migration = VIM and AKT2 and ERK and not miR200 and not AKT1 and EMT and Invasion and not p63
+NICD = not p53 and not p63 and not p73 and not miR200 and not miR34 and ECM
+SMAD = TGFbeta and not miR200 and not miR203
+SNAI1 = (NICD or TWIST1) and not miR203 and not miR34 and not p53 and not CTNNB1
+SNAI2 = (TWIST1 or CTNNB1 or NICD) and not miR200 and not p53 and not miR203
+TGFbeta = (ECM or NICD) and not CTNNB1
+TWIST1 = CTNNB1 or NICD or SNAI1
+VIM = CTNNB1 or ZEB2
+ZEB1 = ((TWIST1 and SNAI1) or CTNNB1 or SNAI2 or NICD) and not miR200
+ZEB2 = (SNAI1 or (SNAI2 and TWIST1) or NICD) and not miR200 and not miR203
+miR200 = (p63 or p53 or p73) and not (AKT2 or SNAI1 or SNAI2 or ZEB1 or ZEB2)
+miR203 = p53 and not (SNAI1 or ZEB1 or ZEB2)
+miR34 = not (SNAI1 or ZEB1 or ZEB2) and (p53 or p73) and AKT2 and not p63 and not AKT1
+p21 = ((SMAD and NICD) or p63 or p53 or p73 or AKT2) and not (AKT1 or ERK)
+p53 = (DNAdamage or CTNNB1 or NICD or miR34) and not SNAI2 and not p73 and not AKT1 and not AKT2
+p63 = DNAdamage and not NICD and not AKT1 and not AKT2 and not p53 and not miR203
+p73 = DNAdamage and not p53 and not ZEB1 and not AKT1 and not AKT2
 ```
