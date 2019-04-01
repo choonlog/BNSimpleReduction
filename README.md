@@ -1,2 +1,2 @@
 ## BNSimpleReduction
-aaa
+BNSimpleReduction
