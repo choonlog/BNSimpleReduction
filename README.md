@@ -4,6 +4,9 @@ BNSimpleReduction is a Python package that reduces Boolean networks using algebr
 ## Installation
 You can simply download it from this git repository. setup.py is not provided. It does not matter which operating system you use. Only python 3 is supported.
 
+The following package should be used to find FVS.
+* https://github.com/needleworm/fvs
+
 ## Output
 - Disjunctive normal form(DNF) of transformed networks
 - Reduced networks
