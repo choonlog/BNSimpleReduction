@@ -12,7 +12,7 @@ You can simply download it from this git repository. setup.py is not provided. I
 - .sif file form for Cytoscape application of reduced networks
 
 ## Example
-The following functions are in main.py:
+The following function are in main.py:
 ```
 red.LetsReduce("Cohen.txt", "00110010110000000000100001001011", True)
 ```
