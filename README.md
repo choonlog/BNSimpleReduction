@@ -15,7 +15,7 @@ You can simply download it from this git repository. setup.py is not provided. I
 ## Example
 The following function is in main.py:
 ```
-import reduction as red
+import BNsimpleReduction as red
 red.LetsReduce("metastasis_influence_network.txt", "00110010110000000000100001001011", True)
 ```
 
