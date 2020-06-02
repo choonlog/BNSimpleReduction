@@ -1,16 +1,16 @@
 ## BNSimpleReduction
-BNSimpleReduction is a Python package that reduces Boolean networks using algebraic and structural information. The FVS found in the reduced network can be applied to the original networks, thus enabling efficient control. The paper will soon be published.
+BNSimpleReduction is a Python package that reduces Boolean networks in such a way that only one product term having literals with no negation is maintained. Thanks to the network reduction by BNSimpleReduction, the minimum FVS found with respect to the reduced network can be applied to the original network, thus enabling efficient control in terms of the number of control inputs. A relevant paper will be soon published.
 
 ## Installation
-You can simply download it from this git repository. setup.py is not provided. It does not matter which operating system you use. Only python 3 is supported. The following package should be used to find FVS.
+You can simply download BNSimpleReduction from this git repository, while setup.py is not provided. BNSimpleReduction is executed on any operating system (Windows, Mac OS, Linux, etc), but Python 3.0 or higher versions must be installed to run the program. The following package can be used to derive the minimum FVS.
 * https://github.com/needleworm/fvs
 
 ## Output
-- Disjunctive normal form(DNF) of transformed networks
-- Reduced networks
-- Minimal FVSs of reduced networks
-- Minimal FVSs of original networks
-- .sif file form for Cytoscape application of reduced networks
+- Disjunctive normal form (DNF) of the transformed network
+- Reduced network
+- Minimal FVS of the reduced network
+- Minimal FVS of the original network
+- .sif file form for Cytoscape application of the reduced network
 
 ## Example
 The following function is in main.py:
@@ -19,7 +19,7 @@ import BNsimpleReduction as red
 red.LetsReduce("metastasis_influence_network.txt", "00110010110000000000100001001011", True)
 ```
 
-The first parameter is the name of the network file in the networks folder. The second parameter is the desired attractor of the network. The node order must match the node order of the network file. The third parameter can be True or False. True means leaving only one plus product and False means leaving all plus product when reducing the networks. The network file should be written as follows.
+The first parameter is the name of the network file in the networks folder. The second parameter is the desired attractor of the network. The node order must match that of the network file. The third parameter can be True or False. True means leaving only one plus product and False means leaving all plus products in reducing the networks. Boolean logic in the network file should be written as follows.
 ```
 AKT1 = CTNNB1 and (NICD or TGFbeta or GF_ or CDH2) and not p53 and not miR34 and not CDH1
 AKT2 = TWIST1 and (TGFbeta or GF_ or CDH2) and not (miR203 or miR34 or p53)
