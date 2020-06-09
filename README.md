@@ -15,15 +15,13 @@ You can simply download BNSimpleReduction from this git repository, while setup.
 The following function is in main.py:
 ```
 import BNSimpleReduction as BNred
-
-# The first parameter is the name of the network file in the networks directory.
-# The second parameter is the desired attractor of the network. The node order must match that of the network file.
-# See the github repository for more details (https://github.com/choonlog/BNSimpleReduction).
-# 00110010110000000000100001001011
+# BNred.main(Parameter_1, Parameter_2)
+# Parameter_1: Boolean network file
+# Parameter_2: Desired fixed point attractor (steady state) in the network
 BNred.main("./networks/metastasis_influence_network.txt", "00110010110000000000100001001011")
 ```
 
-The first parameter is the name of the network file in the networks folder. The second parameter is the desired attractor of the network. The node order must match that of the network file. The third parameter can be True or False. True means leaving only one plus product and False means leaving all plus products in reducing the networks. Boolean logic in the network file should be written as follows.
+The first parameter is the name of the network file in the networks directory. The second parameter is the desired attractor of the network. The node order must match that of the network file. Boolean logic in the network file should be written as follows.
 ```
 AKT1 = CTNNB1 and (NICD or TGFbeta or GF_ or CDH2) and not p53 and not miR34 and not CDH1
 AKT2 = TWIST1 and (TGFbeta or GF_ or CDH2) and not (miR203 or miR34 or p53)
