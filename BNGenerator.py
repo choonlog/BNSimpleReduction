@@ -11,16 +11,9 @@ import pickle
 def avg(lst):
     return sum(lst) / len(lst)
 
-def generator(nodeNum):
+def generator(nodeNum, minIndegree, maxIndegree):
     totalLogicDic = pickle.load(open("./data/totalLogic.p", "rb"))
-
     allNodeLength = nodeNum
-
-    # Set the minimum indegree in the graph
-    minIndegree = 1
-
-    # Set the maximum indegree in the graph
-    maxIndegree = 3
     fillNumber = len(str(allNodeLength))
     allNodes = ["x" + str(i).zfill(fillNumber) for i in range(1, allNodeLength + 1)]
     formatNormal = ""
@@ -44,7 +37,9 @@ def generator(nodeNum):
 
     return formatNormal
 
-formatNormal = generator(20)
+# generator(Parameter_1)
+# Parameter_1: The number of nodes
+formatNormal = generator(20, 1, 3)
 netName = "RBN_1"
 with open(netName + ".txt", "w") as text_file:
     text_file.write(formatNormal)
