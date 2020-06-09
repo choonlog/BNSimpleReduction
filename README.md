@@ -69,10 +69,13 @@ BNGenerator is executed independently of BNSimple, and is a software that genera
 
 ## Example
 It can be executed by entering the parameters of the generator function in line 49 of BNGenerator.py.
+
 ```
-# generator(Parameter_1, Parameter_1, Parameter_1)
+# generator(Parameter_1, Parameter_2, Parameter_3)
 # Parameter_1: The number of nodes in the network to be generated
-# Parameter_2: Minimum in-degree
-# Parameter_3: Maximum in-degree
+# Parameter_2: Minimum indegree
+# Parameter_3: Maximum indegree
 formatNormal = generator(20, 1, 3)
 ```
+
+The number of nodes in the network to be generated is determined by Parameter_1, and the input link of each node is randomly selected from the uniform distribution with a range between Parameter_2 and Parameter_3. Boolean logic is randomly assigned from the Biological Boolean logic collection data (./data/totalLogic.p) according to the indegree after the input link of each node is determined.
