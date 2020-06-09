@@ -69,6 +69,7 @@ BNGenerator is executed independently of BNSimpleReduction, and is a software th
 
 ## Example
 It can be executed by entering the parameters of the generator function in line 49 of BNGenerator.py.
+The output is printed on the console.
 
 ```
 # generator(Parameter_1, Parameter_2, Parameter_3)
