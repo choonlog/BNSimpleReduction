@@ -1,6 +1,6 @@
 <img src="BNSimpleReduction.png" alt="BNSimpleReduction" />
 
-## BNSimpleReduction
+# BNSimpleReduction
 BNSimpleReduction is a Python package that reduces Boolean networks in such a way that only one product term having literals with no negation is maintained. Thanks to the network reduction by BNSimpleReduction, the minimum FVS found with respect to the reduced network can be applied to the original network, thus enabling efficient control in terms of the number of control inputs. A relevant paper will be soon published.
 
 ## Installation
