@@ -64,11 +64,15 @@ p73 = DNAdamage and not p53 and not ZEB1 and not AKT1 and not AKT2
 
 You should write '\_INPUT\_' for all input nodes with the indegree of 0 like DNAdamage and ECM in the example above.
 
-### BNGenerator
+# BNGenerator
 BNGenerator is executed independently of BNSimple, and is a software that generates a random Boolean network using Boolean logic extracted from 78 Boolean networks in the Cell Collective (https://cellcollective.org/).
 
+## Example
+It can be executed by entering the parameters of the generator function in line 49 of BNGenerator.py.
 ```
-# generator(Parameter_1)
-# Parameter_1: The number of nodes
-formatNormal = generator(20)
+# generator(Parameter_1, Parameter_1, Parameter_1)
+# Parameter_1: The number of nodes in the network to be generated
+# Parameter_2: Minimum in-degree
+# Parameter_3: Maximum in-degree
+formatNormal = generator(20, 1, 3)
 ```
