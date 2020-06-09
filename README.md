@@ -14,6 +14,8 @@ You can simply download BNSimpleReduction from this git repository, while setup.
 4. OnePlusProductsNet_forFVSFINDER.txt: FVS FINDER input format of the reduced network consisting of one plus products
 
 ## Example
+<img src="animation.gif" alt="BNSimpleReduction" />
+
 The following function is in main.py:
 ```
 import BNSimpleReduction as BNred
@@ -22,8 +24,6 @@ import BNSimpleReduction as BNred
 # Parameter_2: Desired fixed point attractor (steady state) in the network
 BNred.main("./networks/metastasis_influence_network.txt", "00110010110000000000100001001011")
 ```
-
-<img src="animation.gif" alt="BNSimpleReduction" />
 
 The first parameter is the name of the network file in the networks directory. The second parameter is the desired attractor of the network. The node order must match that of the network file. Boolean logic in the network file should be written as follows.
 ```
