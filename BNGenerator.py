@@ -37,9 +37,12 @@ def generator(nodeNum, minIndegree, maxIndegree):
 
     return formatNormal
 
-# generator(Parameter_1)
-# Parameter_1: The number of nodes
+# generator(Parameter_1, Parameter_2, Parameter_3)
+# Parameter_1: The number of nodes in the network to be generated
+# Parameter_2: Minimum indegree
+# Parameter_3: Maximum indegree
 formatNormal = generator(20, 1, 3)
+
 netName = "RBN_1"
 with open(netName + ".txt", "w") as text_file:
     text_file.write(formatNormal)
