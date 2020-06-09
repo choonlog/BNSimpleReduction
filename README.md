@@ -19,6 +19,7 @@ You can simply download BNSimpleReduction from this git repository, while setup.
 The following function is in main.py:
 ```
 import BNSimpleReduction as BNred
+
 # BNred.main(Parameter_1, Parameter_2)
 # Parameter_1: Boolean network file
 # Parameter_2: Desired fixed point attractor (steady state) in the network
