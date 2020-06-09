@@ -68,8 +68,8 @@ You should write '\_INPUT\_' for all input nodes with the indegree of 0 like DNA
 BNGenerator is executed independently of BNSimpleReduction, and is a software that generates a random Boolean network using Biological Boolean logics extracted from 78 Biological Boolean networks in the Cell Collective (https://cellcollective.org/).
 
 ## Example
-It can be executed by entering the parameters of the generator function in line 49 of BNGenerator.py.
-The output is printed on the console.
+It can be executed by entering the parameters of the generator function in line 42 of BNGenerator.py.
+The result is saved in the name specified by the user in line 43.
 
 ```
 # generator(Parameter_1, Parameter_2, Parameter_3)
@@ -77,6 +77,9 @@ The output is printed on the console.
 # Parameter_2: Minimum indegree
 # Parameter_3: Maximum indegree
 formatNormal = generator(20, 1, 3)
+netName = "RBN_1"
+with open(netName + ".txt", "w") as text_file:
+    text_file.write(formatNormal)
 ```
 
 The number of nodes in the network to be generated is determined by Parameter_1, and the input link of each node is randomly selected from the uniform distribution with a range between Parameter_2 and Parameter_3. Boolean logic is randomly assigned from the Biological Boolean logic collection data (./data/totalLogic.p) according to the indegree after the input link of each node is determined.
