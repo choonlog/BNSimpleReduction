@@ -7,8 +7,7 @@ Contact: chunkyung@kaist.ac.kr
 
 import BNSimpleReduction as BNred
 
-# The first parameter is the name of the network file in the networks directory.
-# The second parameter is the desired attractor of the network. The node order must match that of the network file.
-# See the github repository for more details (https://github.com/choonlog/BNSimpleReduction).
-# 00110010110000000000100001001011
+# BNred.main(Parameter_1, Parameter_2)
+# Parameter_1: Boolean network file
+# Parameter_2: Desired fixed point attractor (steady state) in the network
 BNred.main("./networks/metastasis_influence_network.txt", "00110010110000000000100001001011")
