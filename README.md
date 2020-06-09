@@ -2,21 +2,25 @@
 BNSimpleReduction is a Python package that reduces Boolean networks in such a way that only one product term having literals with no negation is maintained. Thanks to the network reduction by BNSimpleReduction, the minimum FVS found with respect to the reduced network can be applied to the original network, thus enabling efficient control in terms of the number of control inputs. A relevant paper will be soon published.
 
 ## Installation
-You can simply download BNSimpleReduction from this git repository, while setup.py is not provided. BNSimpleReduction is executed on any operating system (Windows, Mac OS, Linux, etc), but Python 3.0 or higher versions must be installed to run the program. The following package can be used to derive the minimum FVS.
+You can simply download BNSimpleReduction from this git repository, while setup.py is not provided. BNSimpleReduction is executed on any operating system (Windows, Mac OS, Linux, etc), but Python 3.5 or higher versions must be installed to run the program. The following package can be used to derive the minimum FVS.
 * https://github.com/needleworm/fvs
 
 ## Output
-- Disjunctive normal form (DNF) of the transformed network
-- Reduced network
-- Minimal FVS of the reduced network
-- Minimal FVS of the original network
-- .sif file form for Cytoscape application of the reduced network
+- AllPlusProductsNet.txt: Reduced network consisting of all plus products
+- OnePlusProductNet.txt: Reduced network consisting of One plus product
+- AllPlusProductsNet_forFVSFINDER.txt: FVS FINDER input format of the reduced network consisting of all plus products
+- OnePlusProductsNet_forFVSFINDER.txt: FVS FINDER input format of the reduced network consisting of one plus products
 
 ## Example
 The following function is in main.py:
 ```
-import BNsimpleReduction as red
-red.LetsReduce("metastasis_influence_network.txt", "00110010110000000000100001001011", True)
+import BNSimpleReduction as BNred
+
+# The first parameter is the name of the network file in the networks directory.
+# The second parameter is the desired attractor of the network. The node order must match that of the network file.
+# See the github repository for more details (https://github.com/choonlog/BNSimpleReduction).
+# 00110010110000000000100001001011
+BNred.main("./networks/metastasis_influence_network.txt", "00110010110000000000100001001011")
 ```
 
 The first parameter is the name of the network file in the networks folder. The second parameter is the desired attractor of the network. The node order must match that of the network file. The third parameter can be True or False. True means leaving only one plus product and False means leaving all plus products in reducing the networks. Boolean logic in the network file should be written as follows.
