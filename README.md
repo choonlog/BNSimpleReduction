@@ -6,10 +6,10 @@ You can simply download BNSimpleReduction from this git repository, while setup.
 * https://github.com/needleworm/fvs
 
 ## Output
-> AllPlusProductsNet.txt: Reduced network consisting of all plus products
-> OnePlusProductNet.txt: Reduced network consisting of One plus product
-> AllPlusProductsNet_forFVSFINDER.txt: FVS FINDER input format of the reduced network consisting of all plus products
-> OnePlusProductsNet_forFVSFINDER.txt: FVS FINDER input format of the reduced network consisting of one plus products
+1. AllPlusProductsNet.txt: Reduced network consisting of all plus products
+2. OnePlusProductNet.txt: Reduced network consisting of One plus product
+3. AllPlusProductsNet_forFVSFINDER.txt: FVS FINDER input format of the reduced network consisting of all plus products
+4. OnePlusProductsNet_forFVSFINDER.txt: FVS FINDER input format of the reduced network consisting of one plus products
 
 ## Example
 The following function is in main.py:
