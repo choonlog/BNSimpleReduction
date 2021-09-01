@@ -1,7 +1,8 @@
 <img src="BNSimpleReduction.png" alt="BNSimpleReduction" />
 
 # BNSimpleReduction
-BNSimpleReduction is a Python package that reduces Boolean networks in such a way that only one product term having literals with no negation is maintained. Thanks to the network reduction by BNSimpleReduction, the minimum FVS found with respect to the reduced network can be applied to the original network, thus enabling efficient control in terms of the number of control inputs. A relevant paper will be soon published.
+BNSimpleReduction is a Python package that reduces Boolean networks in such a way that only one product term having literals with no negation is maintained. Thanks to the network reduction by BNSimpleReduction, the minimum FVS found with respect to the reduced network can be applied to the original network, thus enabling efficient control in terms of the number of control inputs. A related paper has been recently published.
+https://ieeexplore.ieee.org/document/9273230?source=authoralert
 
 ## Installation
 You can simply download BNSimpleReduction from this git repository, while setup.py is not provided. BNSimpleReduction is executed on any operating system (Windows, Mac OS, Linux, etc), but Python 3.5 or higher versions must be installed to run the program. The following package can be used to derive the minimum FVS after running BNSimpleReduction.
