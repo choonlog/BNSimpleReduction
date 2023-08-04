@@ -6,7 +6,6 @@ Contact: chunkyung@kaist.ac.kr
 """
 
 import re
-import ast
 from tqdm import tqdm
 
 # Non-recursive depth first search algorithm
@@ -79,7 +78,7 @@ def main(allPlusProduct):
         scoreDic = {}
         for term, score in zip(termList, scoreList):
             score = score.replace("&", "+")
-            score = ast.literal_eval(score)
+            score = eval(score)
             scoreDic[term] = score
 
         # Find minimum value in dictionary
